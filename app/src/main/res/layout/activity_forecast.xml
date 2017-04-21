@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
      Copyright (C) 2016 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
@@ -35,12 +34,10 @@
     <!--COMPLETED (4) Give the TextView a default error message stating that an error occurred (use strings.xml)-->
     <!--COMPLETED (5) Set the default visibility of the TextView to invisible-->
     <TextView
-        android:id="@+id/tv_error_message_display"
+        android:id="@+id/tv_loading_error"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:text="@string/error_message"
-        android:textSize="20sp"
+        android:text="@string/loading_failed"
         android:visibility="invisible" />
 
     <!--COMPLETED (12) Add a ProgressBar to show the user content is loading-->
@@ -48,9 +45,9 @@
     <!--COMPLETED (14) Set the layout_gravity of the ProgressBar to center-->
     <!--COMPLETED (15) Set the default visibility of the ProgressBar to invisible-->
     <ProgressBar
-        android:id="@+id/pb_loading_indicator"
-        android:layout_height="42dp"
+        android:id="@+id/progress_loading"
         android:layout_width="42dp"
+        android:layout_height="42dp"
         android:layout_gravity="center"
         android:visibility="invisible" />
 
