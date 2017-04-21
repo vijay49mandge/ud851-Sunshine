@@ -36,10 +36,10 @@ public class MainActivity extends AppCompatActivity {
     private TextView mWeatherTextView;
 
     // COMPLETED (6) Add a TextView variable for the error message display
-    TextView mLoadErrorTextView;
+    private TextView mLoadErrorTextView;
 
     // COMPLETED (16) Add a ProgressBar variable to show and hide the progress bar
-    ProgressBar mProgressLoading;
+    private ProgressBar mProgressLoading;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,6 +90,7 @@ public class MainActivity extends AppCompatActivity {
         // COMPLETED (18) Within your AsyncTask, override the method onPreExecute and show the loading indicator
         @Override
         protected void onPreExecute() {
+            super.onPreExecute();
             mProgressLoading.setVisibility(View.VISIBLE);
         }
 
@@ -122,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(String[] weatherData) {
             // COMPLETED (19) As soon as the data is finished loading, hide the loading indicator
-            mProgressLoading.setVisibility(View.GONE);
+            mProgressLoading.setVisibility(View.INVISIBLE);
 
             if (weatherData != null) {
                 // COMPLETED (11) If the weather data was not null, make sure the data view is visible
@@ -139,7 +140,6 @@ public class MainActivity extends AppCompatActivity {
                 showErrorMessage();
             }
             // COMPLETED (10) If the weather data was null, show the error message
-
         }
     }
 
