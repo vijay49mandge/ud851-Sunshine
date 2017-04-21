@@ -99,6 +99,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+
     // COMPLETED (2) Create a menu resource in res/menu/ called forecast.xml
     // COMPLETED (3) Add one item to the menu with an ID of action_refresh
     // COMPLETED (4) Set the title of the menu item to "Refresh" using strings.xml
@@ -123,6 +124,4 @@ public class MainActivity extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
-
-
 }
